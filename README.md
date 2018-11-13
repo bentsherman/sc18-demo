@@ -14,6 +14,14 @@ You can access the appropriate compute node with this command:
 qsub -I -q smith_mri -l select=1:ncpus=40:mpiprocs=5:ngpus=4:gpu_model=v100nv:mem=80gb,walltime=72:00:00
 ```
 
+On JupyterHub you should use the following options:
+- __Number of resource chunks:__ 2
+- __CPU cores per chunk:__ 16
+- __Amount of memory per chunk:__ 30gb
+- __Number of GPUs per chunk:__ 2
+- __Walltime:__ 72 hours
+- __Queue:__ smith_mri
+
 ## Installation
 
 This README assumes that the files for this demo are in a directory called `sc18-demo`.
